@@ -13,7 +13,9 @@ end
 # with the names of each spicy food
 def get_names(spicy_foods)
   # your code here
-  spicy_foods.map {|spiced_food| spiced_food[:name] }
+  spicy_foods.map do |spicy|
+    spicy[:name]
+  end
 end
 
 
@@ -21,7 +23,9 @@ end
 # where the heat level of the food is greater than 5
 def spiciest_foods(spicy_foods)
   # your code here
-  spicy_foods.filter {|spiced_food| spiced_food[:heat_level] > 5}
+  spicy_foods.filter do |spiciest|
+    spiciest[:heat_level]>5
+  end
 end
 
 # given an array of spicy foods, **output to the terminal**
